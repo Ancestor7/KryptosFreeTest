@@ -10,10 +10,7 @@ pipeline {
     stage('install playwright') {
       steps {
         sh '''
-          export PATH=/usr/local/bin:$PATH && npm install
-          npm install -D @playwright/test
-          npm install -D playwright-core
-          npm i -g npx
+          export PATH=/usr/local/bin:$PATH && npm install && npm install -D @playwright/test && npm install -D playwright-core && npm i -g npx
         '''
       }
     }
