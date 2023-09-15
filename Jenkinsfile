@@ -19,7 +19,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 // Run your Playwright test script, setting the PATH environment variable again
-                sh 'export PATH=/usr/local/bin:$PATH && npx playwright test main.spec.ts'
+                sh 'export PATH=/usr/local/bin:$PATH && npx playwright test'
             }
         }
     }
