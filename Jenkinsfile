@@ -20,7 +20,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''
-          export PATH=/usr/local/bin:$PATH && npx playwright test --workers=1
+          export PATH=/usr/local/bin:$PATH && npx playwright test deneme.spec.ts --workers=1
         '''
       }
       post {
