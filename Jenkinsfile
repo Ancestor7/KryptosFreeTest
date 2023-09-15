@@ -20,8 +20,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''
-          export PATH=/usr/local/bin:$PATH && npx playwright test --list
-          export PATH=/usr/local/bin:$PATH && npx playwright test
+          export PATH=/usr/local/bin:$PATH && npx playwright test --workers=1
         '''
       }
       post {
