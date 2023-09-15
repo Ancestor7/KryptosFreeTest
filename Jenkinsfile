@@ -13,7 +13,7 @@ pipeline {
           export PATH=/usr/local/bin:$PATH && npm install
           npm install -D @playwright/test
           npm install -D playwright-core
-          sudo npm i -g npx
+          npm i -g npx
         '''
       }
     }
