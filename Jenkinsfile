@@ -34,12 +34,12 @@ pipeline {
           if (isUnix()) {
             // Unix/Linux environment
             sh '''
-              npx playwright test deneme.spec.ts --workers=1
+              npx playwright test kryptos-test.spec.ts --workers=1
             '''
           } else {
             // Windows environment
             bat '''
-              npx.cmd playwright test deneme.spec.ts --workers=1
+              npx.cmd playwright test kryptos-test.spec.ts --workers=1
             '''
           }
         }
