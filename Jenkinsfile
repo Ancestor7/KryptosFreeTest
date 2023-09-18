@@ -10,17 +10,17 @@ pipeline {
     stage('install playwright') {
       steps {
         sh '''
-          export PATH=/usr/local/bin:$PATH && npm install
-          export PATH=/usr/local/bin:$PATH && npm install -D @playwright/test
-          export PATH=/usr/local/bin:$PATH && npm install -D playwright-core
-          export PATH=/usr/local/bin:$PATH && npm i -g npx
+          npm install
+          npm install -D @playwright/test
+          npm install -D playwright-core
+          npm i -g npx
         '''
       }
     }
     stage('test') {
       steps {
         sh '''
-          export PATH=/usr/local/bin:$PATH && npx playwright test deneme.spec.ts --workers=1
+          npx playwright test deneme.spec.ts --workers=1
         '''
       }
       post {
