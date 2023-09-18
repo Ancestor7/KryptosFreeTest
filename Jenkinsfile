@@ -37,7 +37,7 @@ pipeline {
           } else {
             // Windows environment
             bat '''
-              npx.cmd playwright test kryptos-test.spec.ts --workers=1
+              npx playwright test kryptos-test.spec.ts --workers=1
             '''
           }
         }
