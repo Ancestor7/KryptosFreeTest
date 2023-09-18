@@ -41,7 +41,7 @@ test.afterAll(async () => {
 })
 
 let page: Page;
-let password = "ABCD*1234";// DEĞİŞMELİ
+let password = "Kaan*2001";// DEĞİŞMELİ
 
 test('Uygulamaya login yap', async () => {
   
