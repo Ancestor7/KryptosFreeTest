@@ -49,7 +49,7 @@ test('Uygulamaya login yap', async () => {
   const timeout = 30000; 
   const startTime = Date.now();
 
-  await sleep(6000);
+  await sleep(30000);
 
   // Uygulama başta login penceresiyle başlamadığı için while loopu kurdum
   while (true) {
