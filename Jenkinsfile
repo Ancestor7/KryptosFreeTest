@@ -15,14 +15,12 @@ pipeline {
             sh '''
               npm install
               npm install -D @playwright/test
-              npm install -D playwright-core
             '''
           } else {
             // Windows environment
             bat '''
               npm install
               npm install -D @playwright/test
-              npm install -D playwright-core
             '''
           }
         }
