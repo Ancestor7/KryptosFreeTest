@@ -1,7 +1,7 @@
 pipeline {
   agent any 
   stages {
-    stage('Checkout') {
+    stage('Checkout repository') {
       steps {
         // Checkout your repository
         git branch: 'main', url: 'https://github.com/Ancestor7/KryptosFreeTest.git'
