@@ -11,6 +11,7 @@ let electronApp: ElectronApplication;
  * Kryptos uygulaması bir kere açılmışken tekrar başka bir worker tarafından açılamayacağından workerların
  * paralel çalışmalarını engellemek için test komutu konsola şu şekilde yazılmalı: npx playwright test --workers=1
  */
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 //beforeAll hook fonksyonu her worker için testlere başlamadan önce çalışması gereken kodları içerir.
 test.beforeAll(async () => {
@@ -47,6 +48,8 @@ test('Uygulamaya login yap', async () => {
   
   const timeout = 30000; 
   const startTime = Date.now();
+
+  await sleep(6000);
 
   // Uygulama başta login penceresiyle başlamadığı için while loopu kurdum
   while (true) {
