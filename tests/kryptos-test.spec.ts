@@ -38,6 +38,7 @@ test.beforeAll(async () => {
 
 //her worker testlerin tamamını bitirdiğinde bu kodları çalıştırır
 test.afterAll(async () => {
+  await sleep(10000);
   await electronApp.close();
 })
 
