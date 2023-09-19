@@ -45,9 +45,9 @@ pipeline {
           }
         }
       }
-      post {
+      /*post {
         success {
-          //archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
+          archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
           script {
             if (isUnix()) {
               sh 'rm -rf *.png'
@@ -56,7 +56,7 @@ pipeline {
             }
           }
         }
-      }
+      }*/
     }
   }
 }
