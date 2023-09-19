@@ -43,7 +43,7 @@ test.afterAll(async () => {
 })
 
 let page: Page;
-let password = "Kaan*2001";// DEĞİŞMELİ
+let password = "AAAAAAAA";// DEĞİŞMELİ
 
 test('Uygulamaya login yap', async () => {
   test.setTimeout(120000);
