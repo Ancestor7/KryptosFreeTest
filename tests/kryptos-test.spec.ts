@@ -46,18 +46,17 @@ let password = "Kaan*2001";// DEĞİŞMELİ
 
 test('Uygulamaya login yap', async () => {
   test.setTimeout(120000);
-  await sleep(30000);
+  //await sleep(30000);
   
   const timeout = 120000; 
   const startTime = Date.now();
 
-  await sleep(30000);
-
+  //await sleep(30000);
   
   // Uygulama başta login penceresiyle başlamadığı için while loopu kurdum
   while (true) {
 
-    // Eğer 30 saniye içerisinde login penceresi çıkmaz ise diye timeout koşulu koydum
+    // Eğer 120 saniye içerisinde login penceresi çıkmaz ise diye timeout koşulu koydum
     if (Date.now() - startTime > timeout) {
       throw new Error('Timeout waiting for the login window');
     }
