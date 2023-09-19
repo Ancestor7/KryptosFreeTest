@@ -45,12 +45,15 @@ let page: Page;
 let password = "Kaan*2001";// DEĞİŞMELİ
 
 test('Uygulamaya login yap', async () => {
-  await sleep(60000);
+  test.setTimeout(120000);
+  await sleep(30000);
 
   const timeout = 30000; 
   const startTime = Date.now();
 
+  await sleep(30000);
 
+  
   // Uygulama başta login penceresiyle başlamadığı için while loopu kurdum
   while (true) {
 
@@ -73,6 +76,8 @@ test('Uygulamaya login yap', async () => {
     ancak birden fazla textbox olsaydı .getByRole('textbox') yanında baka bir locater daha gerek olurdu
     bu linkte önerilen diğer locater'lar yazıyor -> https://playwright.dev/docs/locators 
   */
+  await sleep(30000);
+
   await page.getByRole('textbox').fill(password); // fill ile textboxa yazı yazıyor
 
   /*
