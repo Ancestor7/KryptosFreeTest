@@ -15,12 +15,14 @@ pipeline {
             sh '''
               npm install
               npm install -D @playwright/test
+              npm i --save-dev @types/node
             '''
           } else {
             // Windows environment
             bat '''
               npm install
               npm install -D @playwright/test
+              npm i --save-dev @types/node
             '''
           }
         }
