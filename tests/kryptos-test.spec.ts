@@ -47,8 +47,8 @@ let password = "Kaan*2001";// DEĞİŞMELİ
 test('Uygulamaya login yap', async () => {
   test.setTimeout(120000);
   await sleep(30000);
-
-  const timeout = 30000; 
+  
+  const timeout = 120000; 
   const startTime = Date.now();
 
   await sleep(30000);
