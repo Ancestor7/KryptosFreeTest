@@ -45,11 +45,11 @@ let page: Page;
 let password = "Kaan*2001";// DEĞİŞMELİ
 
 test('Uygulamaya login yap', async () => {
-  
+  await sleep(60000);
+
   const timeout = 30000; 
   const startTime = Date.now();
 
-  await sleep(30000);
 
   // Uygulama başta login penceresiyle başlamadığı için while loopu kurdum
   while (true) {
