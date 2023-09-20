@@ -53,24 +53,25 @@ test('Uygulamaya login yap', async () => {
   const startTime = Date.now();
 
   //await sleep(30000);
-  
-  // Uygulama başta login penceresiyle başlamadığı için while loopu kurdum
-  while (true) {
 
-    // Eğer 120 saniye içerisinde login penceresi çıkmaz ise diye timeout koşulu koydum
-    if (Date.now() - startTime > timeout) {
-      throw new Error('Timeout waiting for the login window');
-    }
-    const newPage = await electronApp.waitForEvent('window'); // Her aılan pencereyi algılar
-    const title = await newPage.title(); // Açılan pencerenin başlığını çeker
-    
-    // Login penceresinin açılıp açılmadığını böyle ayırt ettim
-    if (title == "Kryptos Free") {
-      page = newPage;
-      break;
+  if (page.title() != "Kryptos Free" ) {
+    // Uygulama başta login penceresiyle başlamadığı için while loopu kurdum
+    while (true) {
+  
+      // Eğer 120 saniye içerisinde login penceresi çıkmaz ise diye timeout koşulu koydum
+      if (Date.now() - startTime > timeout) {
+        throw new Error('Timeout waiting for the login window');
+      }
+      const newPage = await electronApp.waitForEvent('window'); // Her aılan pencereyi algılar
+      const title = await newPage.title(); // Açılan pencerenin başlığını çeker
+      
+      // Login penceresinin açılıp açılmadığını böyle ayırt ettim
+      if (title == "Kryptos Free") {
+        page = newPage;
+        break;
+      }
     }
   }
-
   /* 
     login penceresinde sadece bir tane textbox olduğu için getByRole('textbox') ile bulabildim
     ancak birden fazla textbox olsaydı .getByRole('textbox') yanında baka bir locater daha gerek olurdu
